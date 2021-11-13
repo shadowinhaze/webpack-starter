@@ -32,16 +32,21 @@ module.exports = {
     },
     output: {
         filename: filename('js'),
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'art-quiz'),
         publicPath: ''
     },
     devServer: {
         port: 4200,
         hot: isDev,
+        compress: true,
         headers: {
             "Access-Control-Allow-Origin": "http://localhost:4200/",
             "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
             "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+        },
+        static: {
+            directory: path.join(__dirname, 'src', 'index.html'),
+            watch: true,
         }
     },
 
@@ -52,9 +57,9 @@ module.exports = {
             '@': path.resolve(__dirname, 'src'),
             '@scss': path.resolve(__dirname, 'src/styles_scss'),
             '@img': path.resolve(__dirname, 'src/assets/img'),
-            '@modules': path.resolve(__dirname, 'src/modules')
+            '@modules': path.resolve(__dirname, 'src/modules'),
+            '@svg': path.resolve(__dirname, 'src/assets/svg'),
             // '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
-            // '@svg': path.resolve(__dirname, 'src/assets/svg'),
         }
     },
     optimization: optimization(),
@@ -69,18 +74,18 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
-        new CopyWebpackPlugin({
-            patterns: [
-                // {
-                //     from: path.resolve(__dirname, 'src/assets/favicon'),
-                //     to: path.resolve(__dirname, 'momentum/assets/favicon')
-                // },
-                // {
-                //     from: path.resolve(__dirname, 'src/assets/sounds'),
-                //     to: path.resolve(__dirname, 'momentum/assets/sounds')
-                // }
-            ]
-        })
+        // new CopyWebpackPlugin({
+        //     patterns: [
+        //         {
+        //             from: path.resolve(__dirname, 'src/assets/favicon'),
+        //             to: path.resolve(__dirname, 'momentum/assets/favicon')
+        //         },
+        //         {
+        //             from: path.resolve(__dirname, 'src/assets/sounds'),
+        //             to: path.resolve(__dirname, 'momentum/assets/sounds')
+        //         }
+        //     ]
+        // })
     ],
     module: {
         rules: [
