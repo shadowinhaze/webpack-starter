@@ -1,7 +1,7 @@
 {
-  "name": "momentum",
+  "name": "*****",
   "version": "1.0.0",
-  "description": "RSS student project: momentup like a plugin page",
+  "description": "*******",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
@@ -9,29 +9,29 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
   },
   "keywords": [
-    "RSS"
+    "*****"
   ],
   "author": "@shadowinhaze",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^5.59.1",
+    "webpack": "^5.64.0",
     "webpack-cli": "^4.9.1",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^9.0.1",
+    "copy-webpack-plugin": "^9.1.0",
     "cross-env": "^7.0.3",
-    "css-loader": "^6.3.0",
+    "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
-    "html-loader": "^2.1.2",
-    "html-webpack-plugin": "^5.3.2",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
-    "sass": "^1.42.1",
-    "sass-loader": "^12.1.0",
-    "style-loader": "^3.3.0",
-    "terser-webpack-plugin": "^5.2.4",
-    "webpack-dev-server": "^4.2.1"
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.2.5",
+    "webpack-dev-server": "^4.5.0"
   },
   "dependencies": {
-    "mini-css-extract-plugin": "^2.3.0",
+    "mini-css-extract-plugin": "^2.4.4",
     "normalize.css": "^8.0.1"
   }
 }
